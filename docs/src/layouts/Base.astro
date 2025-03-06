@@ -34,7 +34,7 @@ const pathname = Astro.url.pathname
   .toLowerCase() as PathName
 
 const proseClassNames = clsx(
-  'prose prose-gray prose-pre:scrollbar-[theme(colors.gray.700),,thin] dark:prose-invert',
+  'prose prose-gray prose-pre:scrollbar-[var(--color-gray-700),,thin] dark:prose-invert',
   {
     'prose-h2:mb-1 prose-h3:mb-1 prose-h4:font-medium prose-h4:text-sm [&>section:first-of-type_h2]:mt-0':
       pathname === 'layouts',
@@ -66,7 +66,7 @@ const proseClassNames = clsx(
   </head>
   <body
     class={clsx(
-      'bg-gray-900 min-h-screen stack-l stack-l_space-12 focus:[&_*]:ring-2 focus:[&_*]:ring-gray-600 [&_*]:ring-offset-4 [&_*]:ring-offset-gray-900 [&_blockquote_*]:ring-offset-gray-800',
+      'bg-gray-900 min-h-screen stack-l stack-l_space-12 **:focus:ring-2 **:focus:ring-gray-600 **:ring-offset-4 **:ring-offset-gray-900 [&_blockquote_*]:ring-offset-gray-800',
       {
         'stack-l_split-after-2': !headings,
         'stack-l_no-flex': !!headings,
@@ -99,7 +99,7 @@ const proseClassNames = clsx(
               <div class="pr-2">
                 <NavSecondary links={headings} />
               </div>
-              <div class="pr-2 hidden max-h-[calc(100vh-8.5rem)] overflow-y-auto scrollbar-[theme(colors.gray.700),,thin] bg-gray-900 z-[60]">
+              <div class="pr-2 hidden max-h-[calc(100vh-8.5rem)] overflow-y-auto scrollbar-[var(--color-gray-700),,thin] bg-gray-900 z-60">
                 <NavSecondary links={headings} />
               </div>
             </aside>
@@ -162,7 +162,7 @@ const proseClassNames = clsx(
         ]
         const navClasses = [
           ['opacity-0', 'invisible'],
-          ['fixed', 'top-8', '!block'],
+          ['fixed', 'top-8', 'block!'],
         ]
         const links = navs[1] && [...navs[1].querySelectorAll('a')]
         const headingThresholds = links
@@ -176,10 +176,10 @@ const proseClassNames = clsx(
                 15,
           )
         const linkClasses = [
-          '!text-primary-500',
-          '!opacity-100',
-          'hover:!text-primary-500',
-          '!border-primary-600',
+          'text-primary-500!',
+          'opacity-100!',
+          'hover:text-primary-500!',
+          'border-primary-600!',
         ]
 
         // check if sidebar is stacked on top

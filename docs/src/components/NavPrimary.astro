@@ -23,7 +23,7 @@ const pathname = Astro.url.pathname.split('/')[1].toLowerCase()
               class={clsx(
                 'py-2.5 inline-block border-2 border-gray-600 w-full transition-all hover:border-gray-500 text-sm text-center',
                 {
-                  '!border-primary-500': pathname === slug,
+                  'border-primary-500!': pathname === slug,
                 },
               )}
             >

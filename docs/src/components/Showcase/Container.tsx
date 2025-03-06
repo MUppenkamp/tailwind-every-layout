@@ -61,7 +61,7 @@ export default function Container({
               })
             }}
             className={clsx(
-              'fixed p-2 bg-gray-50 text-gray-900 font-semibold z-[90]',
+              'fixed p-2 bg-gray-50 text-gray-900 font-semibold z-90',
               propClassNames['imposter-l_m-12']
                 ? 'top-12 left-12'
                 : 'top-base left-base',

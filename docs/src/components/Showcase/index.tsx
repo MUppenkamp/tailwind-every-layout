@@ -39,7 +39,7 @@ export default function Showcase({
 
   const otherClassNames = useMemo<ClassNamesState>(
     () => ({
-      'scrollbar-[theme(colors.gray.500)]': true,
+      'scrollbar-(--color-gray-500)': true,
       'will-change-[width]': !!actions?.includes('narrow'),
     }),
     [],
@@ -49,9 +49,9 @@ export default function Showcase({
     <div className="max-w-measure">
       <div
         className={clsx(
-          'bg-gray-800 frame-l frame-l_aspect-[5/4] sm:frame-l_aspect-[16/10] p-1 not-prose',
+          'bg-gray-800 frame-l frame-l_aspect-5/4 sm:frame-l_aspect-16/10 p-1 not-prose',
           {
-            'relative z-[80]': 'imposter-l' in propClassNames,
+            'relative z-80': 'imposter-l' in propClassNames,
           },
         )}
       >

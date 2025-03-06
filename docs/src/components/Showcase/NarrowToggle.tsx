@@ -8,7 +8,7 @@ export default function HighContrastToggle({
 }: ActionToggleProps) {
   return (
     <ActionToggle
-      actionClassName="!w-2/5"
+      actionClassName="w-2/5!"
       Icon={Mobile}
       label="Narrow"
       {...{ actionClassNames, setActionClassNames }}
