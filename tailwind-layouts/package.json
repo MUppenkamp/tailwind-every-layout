@@ -39,8 +39,12 @@
     "publish": "npm run build && npm publish"
   },
   "devDependencies": {
-    "tailwindcss": "^3.2.7",
+    "tailwindcss": "^4.0.10",
     "typescript": "^4.9.5",
-    "vite": "^4.1.4"
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.10",
+    "astro": "5.4.2"
   }
 }

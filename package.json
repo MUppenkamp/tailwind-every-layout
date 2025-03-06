@@ -17,7 +17,9 @@
     "publish:plugin": "npm run publish --workspace=tailwind-layouts"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.0.10",
     "concurrently": "^7.6.0",
-    "rimraf": "^4.4.0"
+    "rimraf": "^4.4.1",
+    "tailwindcss": "^4.0.10"
   }
 }
