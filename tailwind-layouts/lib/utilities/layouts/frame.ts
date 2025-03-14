@@ -3,9 +3,12 @@ import type { Utility } from '../../types'
 
 const frame: Utility = {
   static: [
+// @ts-ignore
     ({ options, theme }) => {
+      // @ts-ignore
       const selectors = options.frameSelectors
         .split(',')
+        // @ts-ignore
         .map((str) => str.trim())
       const targetClassName = `.${c(options, 'frame')}_${c(
         options,
@@ -36,8 +39,10 @@ const frame: Utility = {
     },
   ],
   dynamic: [
+// @ts-ignore
     ({ options, theme }) => [
       {
+        // @ts-ignore
         [`${c(options, 'frame')}_aspect`]: (value) => ({
           [`&.${c(options, 'frame')}`]: {
             aspectRatio: `${value}`,

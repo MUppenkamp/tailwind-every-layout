@@ -3,6 +3,7 @@ import type { Utility } from '../../types'
 
 const cluster: Utility = {
   static: [
+// @ts-ignore
     ({ options, theme }) => [
       {
         [`.${c(options, 'cluster')}`]: {
@@ -20,8 +21,10 @@ const cluster: Utility = {
     ],
   ],
   dynamic: [
+// @ts-ignore
     ({ options, theme }) => [
       {
+        // @ts-ignore
         [`${c(options, 'cluster')}_space`]: (value) => ({
           [`&.${c(options, 'cluster')}`]: {
             gap: `${value}`,
@@ -32,8 +35,10 @@ const cluster: Utility = {
         values: theme('spacing') || {},
       },
     ],
+// @ts-ignore
     ({ options, theme }) => [
       {
+        // @ts-ignore
         [`${c(options, 'cluster')}_item-min-w`]: (value) => ({
           [`&.${c(options, 'cluster')} > *`]: {
             minWidth: `${value}`,

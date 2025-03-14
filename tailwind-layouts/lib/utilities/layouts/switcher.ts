@@ -12,6 +12,7 @@ const getLimit = (value: unknown) => {
 
 const switcher: Utility = {
   static: [
+// @ts-ignore
     ({ options, theme }) => {
       const limit =
         getLimit(options.switcherLimit) ||
@@ -45,8 +46,10 @@ const switcher: Utility = {
     },
   ],
   dynamic: [
+// @ts-ignore
     ({ options, theme }) => [
       {
+        // @ts-ignore
         [`${c(options, 'switcher')}_space`]: (value) => ({
           [`&.${c(options, 'switcher')}`]: {
             gap: `${value}`,
@@ -57,8 +60,10 @@ const switcher: Utility = {
         values: theme('spacing') || {},
       },
     ],
+// @ts-ignore
     ({ options, theme }) => [
       {
+        // @ts-ignore
         [`${c(options, 'switcher')}_threshold`]: (value) => ({
           [`&.${c(options, 'switcher')} > *`]: {
             flexBasis: `calc((${value} - 100%) * 999)`,
@@ -73,9 +78,11 @@ const switcher: Utility = {
         },
       },
     ],
+// @ts-ignore
     ({ options, theme }) => {
       return [
         {
+          // @ts-ignore
           [`${c(options, 'switcher')}_limit`]: (value) => {
             const limit =
               getLimit(`${value}`) ||

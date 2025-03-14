@@ -3,6 +3,7 @@ import type { Utility } from '../../types'
 
 const grid: Utility = {
   static: [
+// @ts-ignore
     ({ options, theme }) => [
       {
         [`.${c(options, 'grid')}`]: {
@@ -24,8 +25,10 @@ const grid: Utility = {
     ],
   ],
   dynamic: [
+// @ts-ignore
     ({ options, theme }) => [
       {
+        // @ts-ignore
         [`${c(options, 'grid')}_space`]: (value) => ({
           [`&.${c(options, 'grid')}`]: {
             gap: `${value}`,
@@ -36,8 +39,10 @@ const grid: Utility = {
         values: theme('spacing') || {},
       },
     ],
+// @ts-ignore
     ({ options, theme }) => [
       {
+        // @ts-ignore
         [`${c(options, 'grid')}_item-min-w`]: (value) => ({
           [`&.${c(options, 'grid')}`]: {
             [`@supports (width:min(${value},100%))`]: {

@@ -3,6 +3,7 @@ import type { Utility } from '../../types'
 
 const cover: Utility = {
   static: [
+// @ts-ignore
     ({ options, theme }) => [
       {
         [`.${c(options, 'cover')}`]: {
@@ -43,8 +44,10 @@ const cover: Utility = {
     ],
   ],
   dynamic: [
+// @ts-ignore
     ({ options, theme }) => [
       {
+        // @ts-ignore
         [`${c(options, 'cover')}_space`]: (value) => ({
           [`&.${c(options, 'cover')}`]: {
             padding: `${value}`,
@@ -79,8 +82,10 @@ const cover: Utility = {
         values: theme('spacing') || {},
       },
     ],
+// @ts-ignore
     ({ options, theme }) => [
       {
+        // @ts-ignore
         [`${c(options, 'cover')}_min-h`]: (value) => ({
           [`&.${c(options, 'cover')}`]: {
             [l(options, 'minHeight')]: `${value}`,

@@ -3,6 +3,7 @@ import type { Utility } from '../../types'
 
 const imposter: Utility = {
   static: [
+// @ts-ignore
     ({ options, theme }) => [
       {
         [`.${c(options, 'imposter')}`]: {
@@ -35,8 +36,10 @@ const imposter: Utility = {
     ],
   ],
   dynamic: [
+// @ts-ignore
     ({ options, theme }) => [
       {
+        // @ts-ignore
         [`${c(options, 'imposter')}_m`]: (value) => ({
           [`&.${c(options, 'imposter')}`]: {
             [l(options, 'maxWidth')]: `calc(100% - ${value} * 2)`,

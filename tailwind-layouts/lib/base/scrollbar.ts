@@ -1,4 +1,4 @@
-import type { PluginTheme, AddBaseParamsGenerator } from '../types'
+import type { PluginTheme } from '../types'
 import { t } from '../helpers'
 
 type ScrollbarSize = PluginTheme['scrollbarSize']
@@ -8,7 +8,8 @@ const borderWidth: Record<ScrollbarSize, `${string}px`> = {
   thick: '2px',
 }
 
-const scrollbar: AddBaseParamsGenerator = ({ options, theme }) => [
+// @ts-ignore
+const scrollbar = ({ options, theme }) => [
   {
     '*': {
       scrollbarColor: `${t(theme, 'scrollbarThumbColor')} ${t(

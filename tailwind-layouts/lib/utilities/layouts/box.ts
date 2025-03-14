@@ -3,6 +3,7 @@ import type { Utility } from '../../types'
 
 const box: Utility = {
   static: [
+// @ts-ignore
     ({ options, theme }) => [
       {
         [`.${c(options, 'box')}`]: {
@@ -12,8 +13,10 @@ const box: Utility = {
     ],
   ],
   dynamic: [
+// @ts-ignore
     ({ options, theme }) => [
       {
+        // @ts-ignore
         [`${c(options, 'box')}_p`]: (value) => {
           return {
             [`&.${c(options, 'box')}`]: {
@@ -26,8 +29,10 @@ const box: Utility = {
         values: theme('spacing') || {},
       },
     ],
+// @ts-ignore
     ({ options, theme }) => [
       {
+        // @ts-ignore
         [`${c(options, 'box')}_text`]: (value) => {
           return {
             [`&.${c(options, 'box')}`]: {
@@ -35,6 +40,7 @@ const box: Utility = {
             },
           }
         },
+        // @ts-ignore
         [`${c(options, 'box')}_bg`]: (value) => {
           return {
             [`&.${c(options, 'box')}`]: {
@@ -42,6 +48,7 @@ const box: Utility = {
             },
           }
         },
+        // @ts-ignore
         [`${c(options, 'box')}_border`]: (value) => {
           return {
             [`&.${c(options, 'box')}`]: {

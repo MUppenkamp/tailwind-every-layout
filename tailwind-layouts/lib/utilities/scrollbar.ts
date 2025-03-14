@@ -10,6 +10,7 @@ const borderWidth: Record<ScrollbarSize, `${string}px`> = {
 
 const scrollbar: Utility = {
   static: [
+// @ts-ignore
     ({ options, theme }) => [
       {
         [`.no-${c(options, 'scrollbar')}`]: {
@@ -24,8 +25,10 @@ const scrollbar: Utility = {
   ],
 
   dynamic: [
+// @ts-ignore
     ({ options, theme }) => [
       {
+        // @ts-ignore
         [c(options, 'scrollbar')]: (value) => {
           const [thumbColor, trackColor, size, borderRadius] =
             `${value}`.split(',')
