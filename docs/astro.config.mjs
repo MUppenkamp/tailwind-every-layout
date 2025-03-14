@@ -9,4 +9,7 @@ export default defineConfig({
     syntaxHighlight: 'prism',
   },
   integrations: [tailwindcss(), react(), prefetch(), mdx()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 })
