@@ -23,7 +23,7 @@ import borderHC from './utilities/border-hc'
 import type { PluginOptions, PluginTheme, Utility } from './types'
 
 const tailwindLayouts = plugin.withOptions<PluginOptions>(
-  (options  = defaultOptions) => {
+  (options = defaultOptions) => {
     return ({ addBase, addUtilities, matchUtilities, theme }: PluginAPI) => {
       if (options.useGlobalMeasure) {
         addBase(...globalMeasure({ options, theme }))
