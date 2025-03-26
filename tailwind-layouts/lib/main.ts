@@ -62,22 +62,20 @@ const tailwindLayouts = plugin.withOptions<PluginOptions>(
   (options = defaultOptions) => ({
     theme: {
       [PLUGIN_NAMESPACE]: defaultTheme,
-      extend: ({ theme }: PluginAPI) => {
-        return {
-          spacing: {
-            [options.baseSpacingKey]: `${t(theme, 'baseSpacing')}`,
-            [options.measureKey]: `${t(theme, 'measure')}`,
-          },
-          maxWidth: {
-            [options.measureKey]: `${t(theme, 'measure')}`,
-          },
-          minWidth: {
-            [options.measureKey]: `${t(theme, 'measure')}`,
-          },
-          colors: {
-            slay: '#ff69b4',
-          },
-        };
+      extend: {
+        spacing: ({ theme }: PluginAPI) => ({
+          [options.baseSpacingKey]: `${t(theme, 'baseSpacing')}`,
+          [options.measureKey]: `${t(theme, 'measure')}`,
+        }),
+        maxWidth: ({ theme }: PluginAPI) => ({
+          [options.measureKey]: `${t(theme, 'measure')}`,
+        }),
+        minWidth: ({ theme }: PluginAPI) => ({
+          [options.measureKey]: `${t(theme, 'measure')}`,
+        }),
+        colors: {
+          slay: '#ff69b4',
+        },
       },
     },
   })
