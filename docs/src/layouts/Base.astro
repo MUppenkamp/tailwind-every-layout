@@ -183,7 +183,7 @@ const proseClassNames = clsx(
           'border-primary-600!',
         ]
 
-        // check if sidebar is stacked on top
+        // check if the sidebar is stacked on top
         const checkStacked = () =>
           side.getBoundingClientRect().width >=
           main.getBoundingClientRect().width
@@ -218,14 +218,13 @@ const proseClassNames = clsx(
               nav?.classList.remove(...navClasses[i])
             })
           }
-          // highlight current section
+          // highlight the current section
           headingThresholds?.forEach((top, i, tops) => {
             if (
               i < tops.length - 1 &&
               top &&
               tops[i + 1] &&
               scrollY >= top &&
-              // @ts-ignore
               scrollY < tops[i + 1]
             ) {
               links?.forEach((link, j) => {
