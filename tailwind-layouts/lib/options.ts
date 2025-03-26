@@ -1,7 +1,6 @@
-// TODO Types
-// import type { PluginOptions } from './types'
+import type { PluginOptions } from './types'
 
-const defaultOptions = {
+const defaultOptions: PluginOptions = {
   useGlobalMeasure: true,
   measureExceptions: 'html,body,div,header,nav,main,footer',
   useGlobalScrollbarStyles: false,

@@ -1,6 +1,5 @@
-// TODO Types
-// import type { PluginAPI, PluginUtils } from 'tailwindcss/plugin'
-// type { PluginAPI, PluginUtils } = require('tailwindcss/plugin');
+// @ts-ignore
+import type { PluginAPI, PluginUtils } from 'tailwindcss/plugin'
 
 export type PluginOptions = {
   useLogicalProperties: boolean
@@ -52,38 +51,33 @@ export type PluginTheme = {
   scrollbarBorderRadius: '9999px' | '0px'
 }
 
-// export type PluginThemeFunction = PluginAPI['theme']
-// export type LookupThemeFunction = PluginUtils['theme']
-//
-// export type AddBaseParams = Parameters<PluginAPI['addBase']>
-// export type AddUtilitiesParams = Parameters<PluginAPI['addUtilities']>
-// export type MatchUtilitiesParams = Parameters<
-//   PluginAPI['matchUtilities']
-// >
+export type PluginThemeFunction = PluginAPI['theme']
 
-// type ParamsGenerator<
-//   T extends
-//     | AddBaseParams
-//     // | AddComponentsParams
-//     // | MatchComponentsParams
-//     | AddUtilitiesParams
-//     | MatchUtilitiesParams,
-// > = (config: {
-//   options: PluginOptions
-//   theme: PluginThemeFunction
-// }) => T
-//
-// export type AddBaseParamsGenerator = ParamsGenerator<AddBaseParams>
-//
-// export type AddUtilitiesParamsGenerator =
-//   ParamsGenerator<AddUtilitiesParams>
-//
-// export type MatchUtilitiesParamsGenerator =
-//   ParamsGenerator<MatchUtilitiesParams>
+export type AddBaseParams = Parameters<PluginAPI['addBase']>
+export type AddUtilitiesParams = Parameters<PluginAPI['addUtilities']>
+export type MatchUtilitiesParams = Parameters<
+  PluginAPI['matchUtilities']
+>
+
+type ParamsGenerator<
+  T extends | AddBaseParams
+    | AddUtilitiesParams
+    | MatchUtilitiesParams,
+> = (config: {
+  options: PluginOptions
+  theme: PluginThemeFunction
+}) => T
+
+
+export type AddUtilitiesParamsGenerator =
+  ParamsGenerator<AddUtilitiesParams>
+
+export type MatchUtilitiesParamsGenerator =
+  ParamsGenerator<MatchUtilitiesParams>
 
 export type Utility = {
-  static?: []
-  dynamic?: []
+  static?: AddUtilitiesParamsGenerator[]
+  dynamic?: MatchUtilitiesParamsGenerator[]
 }
 
 export type ValueOf<T> = T[keyof T]
