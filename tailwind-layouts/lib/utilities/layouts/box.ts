@@ -3,7 +3,6 @@ import type { Utility } from '../../types'
 
 const box: Utility = {
   static: [
-// @ts-ignore
     ({ options, theme }) => [
       {
         [`.${c(options, 'box')}`]: {
@@ -13,11 +12,9 @@ const box: Utility = {
     ],
   ],
   dynamic: [
-// @ts-ignore
     ({ options, theme }) => [
       {
-        // @ts-ignore
-        [`${c(options, 'box')}_p`]: (value) => {
+        [`${c(options, 'box')}_p`]: (value: string) => {
           return {
             [`&.${c(options, 'box')}`]: {
               padding: `${value}`,
@@ -29,27 +26,23 @@ const box: Utility = {
         values: theme('spacing') || {},
       },
     ],
-// @ts-ignore
     ({ options, theme }) => [
       {
-        // @ts-ignore
-        [`${c(options, 'box')}_text`]: (value) => {
+        [`${c(options, 'box')}_text`]: (value: string) => {
           return {
             [`&.${c(options, 'box')}`]: {
               color: `${value}`,
             },
           }
         },
-        // @ts-ignore
-        [`${c(options, 'box')}_bg`]: (value) => {
+        [`${c(options, 'box')}_bg`]: (value: string) => {
           return {
             [`&.${c(options, 'box')}`]: {
               backgroundColor: `${value}`,
             },
           }
         },
-        // @ts-ignore
-        [`${c(options, 'box')}_border`]: (value) => {
+        [`${c(options, 'box')}_border`]: (value: string) => {
           return {
             [`&.${c(options, 'box')}`]: {
               borderColor: `${value}`,

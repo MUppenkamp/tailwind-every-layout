@@ -9,8 +9,6 @@ import defaultOptions from '../../options'
 
 const stack: Utility = {
   static: [
-// @ts-ignore
-// @ts-ignore
     ({ options, theme }) => [
       {
         [`.${c(options, 'stack')}`]: {
@@ -31,12 +29,9 @@ const stack: Utility = {
     ],
   ],
   dynamic: [
-// @ts-ignore
-// @ts-ignore
     ({ options, theme }) => [
       {
-        // @ts-ignore
-        [`${c(options, 'stack')}_space`]: (value) => ({
+        [`${c(options, 'stack')}_space`]: (value: string) => ({
           [`&.${c(options, 'stack')} > * + *`]: {
             [l(options, 'marginTop')]: `${value}`,
           },
@@ -46,12 +41,9 @@ const stack: Utility = {
         values: theme('spacing') || {},
       },
     ],
-// @ts-ignore
-// @ts-ignore
     ({ options, theme }) => [
       {
-        // @ts-ignore
-        [`${c(options, 'stack')}_split-after`]: (value) => ({
+        [`${c(options, 'stack')}_split-after`]: (value: string) => ({
           [`&.${c(options, 'stack')}>:nth-child(${value})`]: {
             [l(options, 'marginBottom')]: 'auto',
           },

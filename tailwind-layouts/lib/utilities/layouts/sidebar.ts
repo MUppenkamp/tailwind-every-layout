@@ -3,7 +3,6 @@ import type { Utility } from '../../types'
 
 const sidebar: Utility = {
   static: [
-// @ts-ignore
     ({ options, theme }) => [
       {
         [`.${c(options, 'sidebar')}`]: {
@@ -54,11 +53,9 @@ const sidebar: Utility = {
     ],
   ],
   dynamic: [
-// @ts-ignore
     ({ options, theme }) => [
       {
-        // @ts-ignore
-        [`${c(options, 'sidebar')}_space`]: (value) => ({
+        [`${c(options, 'sidebar')}_space`]: (value: string) => ({
           [`&.${c(options, 'sidebar')}, &.${c(
             options,
             'sidebar',
@@ -71,11 +68,9 @@ const sidebar: Utility = {
         values: theme('space') || {},
       },
     ],
-// @ts-ignore
     ({ options, theme }) => [
       {
-        // @ts-ignore
-        [`${c(options, 'sidebar')}_side-w`]: (value) => ({
+        [`${c(options, 'sidebar')}_side-w`]: (value: string) => ({
           [`&.${c(options, 'sidebar')}`]: {
             '& > :first-child': {
               flexBasis: `${value}`,
@@ -97,11 +92,9 @@ const sidebar: Utility = {
           : {},
       },
     ],
-// @ts-ignore
     ({ options, theme }) => [
       {
-        // @ts-ignore
-        [`${c(options, 'sidebar')}_main-min-w`]: (value) => ({
+        [`${c(options, 'sidebar')}_main-min-w`]: (value: string) => ({
           [`&.${c(options, 'sidebar')}`]: {
             '& > :last-child': {
               [l(options, 'minWidth')]: `${value}`,

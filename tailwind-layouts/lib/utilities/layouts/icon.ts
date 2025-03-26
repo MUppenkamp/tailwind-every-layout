@@ -4,7 +4,6 @@ import type { Utility } from '../../types'
 
 const icon: Utility = {
   static: [
-// @ts-ignore
     ({ options, theme }) => [
       {
         [`.${c(options, 'icon')}`]: {
@@ -30,11 +29,9 @@ const icon: Utility = {
     ],
   ],
   dynamic: [
-// @ts-ignore
     ({ options, theme }) => [
       {
-        // @ts-ignore
-        [`${c(options, 'icon')}_nudge`]: (value) => ({
+        [`${c(options, 'icon')}_nudge`]: (value: string) => ({
           [`&.${c(options, 'icon')}:not(.${c(
             options,
             'icon',
@@ -68,11 +65,9 @@ const icon: Utility = {
         supportsNegativeValues: true,
       },
     ],
-// @ts-ignore
     ({ options, theme }) => [
       {
-        // @ts-ignore
-        [`${c(options, 'icon')}_size`]: (value) => ({
+        [`${c(options, 'icon')}_size`]: (value: string) => ({
           [`&.${c(options, 'icon')}`]: {
             [`& > svg, & > .${c(options, 'icon')}_${c(
               options,
@@ -88,11 +83,9 @@ const icon: Utility = {
         values: { ...theme('width'), ...theme('height') },
       },
     ],
-// @ts-ignore
     ({ options, theme }) => [
       {
-        // @ts-ignore
-        [`${c(options, 'icon')}_space`]: (value) => ({
+        [`${c(options, 'icon')}_space`]: (value: string) => ({
           [`&.${c(options, 'icon')}`]: {
             gap: `${value}`,
           },

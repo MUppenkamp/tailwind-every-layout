@@ -3,7 +3,6 @@ import type { Utility } from '../../types'
 
 const reel: Utility = {
   static: [
-// @ts-ignore
     ({ options, theme }) => [
       {
         [`.${c(options, 'reel')}`]: {
@@ -32,11 +31,9 @@ const reel: Utility = {
     ],
   ],
   dynamic: [
-// @ts-ignore
     ({ options, theme }) => [
       {
-        // @ts-ignore
-        [`${c(options, 'reel')}_space`]: (value) => ({
+        [`${c(options, 'reel')}_space`]: (value: string) => ({
           [`&.${c(options, 'reel')}`]: {
             '& > * + *': {
               [l(options, 'marginLeft')]: `${value}`,
@@ -48,11 +45,9 @@ const reel: Utility = {
         values: theme('spacing') || {},
       },
     ],
-// @ts-ignore
     ({ options, theme }) => [
       {
-        // @ts-ignore
-        [`${c(options, 'reel')}_item-w`]: (value) => ({
+        [`${c(options, 'reel')}_item-w`]: (value: string) => ({
           [`&.${c(options, 'reel')} > *`]: {
             flexBasis: `${value}`,
           },
@@ -66,11 +61,9 @@ const reel: Utility = {
         },
       },
     ],
-// @ts-ignore
     ({ options, theme }) => [
       {
-        // @ts-ignore
-        [`${c(options, 'reel')}_h`]: (value) => ({
+        [`${c(options, 'reel')}_h`]: (value: string) => ({
           [`&.${c(options, 'reel')}`]: {
             [l(options, 'height')]: `${value}`,
           },

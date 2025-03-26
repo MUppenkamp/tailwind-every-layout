@@ -52,6 +52,7 @@ export type PluginTheme = {
 }
 
 export type PluginThemeFunction = PluginAPI['theme']
+export type LookupThemeFunction = PluginUtils['theme']
 
 export type AddBaseParams = Parameters<PluginAPI['addBase']>
 export type AddUtilitiesParams = Parameters<PluginAPI['addUtilities']>
@@ -68,6 +69,7 @@ type ParamsGenerator<
   theme: PluginThemeFunction
 }) => T
 
+export type AddBaseParamsGenerator = ParamsGenerator<AddBaseParams>
 
 export type AddUtilitiesParamsGenerator =
   ParamsGenerator<AddUtilitiesParams>

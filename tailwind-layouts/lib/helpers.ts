@@ -2,13 +2,13 @@ import { PLUGIN_NAMESPACE } from './constants'
 import type {
   PluginTheme,
   PluginOptions,
-  // PluginThemeFunction,
-  // LookupThemeFunction,
+  PluginThemeFunction,
+  LookupThemeFunction,
   ValueOf,
 } from './types'
 
 export function t(
-  theme: any,//PluginThemeFunction | LookupThemeFunction,
+  theme: PluginThemeFunction | LookupThemeFunction,
   key: keyof PluginTheme,
 ): string {
   return theme(`${PLUGIN_NAMESPACE}.${key}`) as ValueOf<PluginTheme>
