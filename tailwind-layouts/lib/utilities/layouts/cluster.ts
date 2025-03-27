@@ -22,7 +22,7 @@ const cluster: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'cluster')}_space`]: (value: string) => ({
+        [`${c(options, 'cluster')}`]: (value: string) => ({
           [`&.${c(options, 'cluster')}`]: {
             gap: `${value}`,
           },

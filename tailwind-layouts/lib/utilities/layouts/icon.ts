@@ -85,7 +85,7 @@ const icon: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'icon')}_space`]: (value: string) => ({
+        [`${c(options, 'icon')}`]: (value: string) => ({
           [`&.${c(options, 'icon')}`]: {
             gap: `${value}`,
           },

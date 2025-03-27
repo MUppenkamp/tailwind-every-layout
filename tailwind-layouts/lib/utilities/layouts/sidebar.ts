@@ -55,7 +55,7 @@ const sidebar: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'sidebar')}_space`]: (value: string) => ({
+        [`${c(options, 'sidebar')}`]: (value: string) => ({
           [`&.${c(options, 'sidebar')}, &.${c(
             options,
             'sidebar',

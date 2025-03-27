@@ -66,14 +66,14 @@ const proseClassNames = clsx(
   </head>
   <body
     class={clsx(
-      'bg-gray-900 min-bs-screen stack-l stack-l_space-12 **:focus:ring-2 **:focus:ring-gray-600 **:ring-offset-4 **:ring-offset-gray-900 [&_blockquote_*]:ring-offset-gray-800',
+      'bg-gray-900 min-bs-screen stack-l stack-l-12 **:focus:ring-2 **:focus:ring-gray-600 **:ring-offset-4 **:ring-offset-gray-900 [&_blockquote_*]:ring-offset-gray-800',
       {
         'stack-l_split-after-2': !headings,
         'stack-l_no-flex': !!headings,
       },
     )}
   >
-    <header class="stack-l stack-l_space-6 pt-8">
+    <header class="stack-l stack-l-6 pt-8">
       <Brand />
       <div class="absolute -top-3 right-2">
         <a
@@ -94,7 +94,7 @@ const proseClassNames = clsx(
       headings ? (
         // Play around with rem value in `center-l_max-w` and `sidebar-l_side-w` value to adjust position
         <div class="center-l center-l_max-is-[calc(23.5rem+65ch)] center-l_gutters-4">
-          <div class="sidebar-l sidebar-l_side-is-56 sidebar-l_space-8 sidebar-l_no-stretch">
+          <div class="sidebar-l sidebar-l_side-is-56 sidebar-l-8 sidebar-l_no-stretch">
             <aside id="sidenav" class="overflow-x-auto">
               <div class="pr-2">
                 <NavSecondary links={headings} />

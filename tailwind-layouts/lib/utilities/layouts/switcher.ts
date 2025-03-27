@@ -47,7 +47,7 @@ const switcher: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'switcher')}_space`]: (value: string) => ({
+        [`${c(options, 'switcher')}`]: (value: string) => ({
           [`&.${c(options, 'switcher')}`]: {
             gap: `${value}`,
           },

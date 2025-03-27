@@ -31,7 +31,7 @@ const stack: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'stack')}_space`]: (value: string) => ({
+        [`${c(options, 'stack')}`]: (value: string) => ({
           [`&.${c(options, 'stack')} > * + *`]: {
             [l(options, 'marginTop')]: `${value}`,
           },

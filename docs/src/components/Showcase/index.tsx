@@ -89,7 +89,7 @@ export default function Showcase({
       {actions && (
         <div>
           <h4>Simulate</h4>
-          <div className="cluster-l cluster-l_space-3">
+          <div className="cluster-l cluster-l-3">
             {actions.map((action, i) => {
               const ActionButton = actionButtons[action]
               return (

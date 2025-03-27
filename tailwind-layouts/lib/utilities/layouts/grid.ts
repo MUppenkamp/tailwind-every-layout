@@ -26,7 +26,7 @@ const grid: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'grid')}_space`]: (value: string) => ({
+        [`${c(options, 'grid')}`]: (value: string) => ({
           [`&.${c(options, 'grid')}`]: {
             gap: `${value}`,
           },

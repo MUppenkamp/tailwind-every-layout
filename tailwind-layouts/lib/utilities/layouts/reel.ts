@@ -33,7 +33,7 @@ const reel: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'reel')}_space`]: (value: string) => ({
+        [`${c(options, 'reel')}`]: (value: string) => ({
           [`&.${c(options, 'reel')}`]: {
             '& > * + *': {
               [l(options, 'marginLeft')]: `${value}`,

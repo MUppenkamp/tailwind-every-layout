@@ -45,7 +45,7 @@ const cover: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'cover')}_space`]: (value: string) => ({
+        [`${c(options, 'cover')}`]: (value: string) => ({
           [`&.${c(options, 'cover')}`]: {
             padding: `${value}`,
 
