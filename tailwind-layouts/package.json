@@ -1,8 +1,9 @@
 {
   "name": "tailwind-layouts",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "ISC",
-  "author": "Aseem Taneja <taneja.aseem@gmail.com> (https://twitter.com/aseemtaneja)",
+  "initialAuthor": "Aseem Taneja <taneja.aseem@gmail.com> (https://twitter.com/aseemtaneja)",
+  "forkedAuthor": "Mona Uppenkamp <m.uppenkamp@gmx.de> (https://www.instagram.com/monauppi)",
   "description": "Layout primitives for Tailwind CSS",
   "keywords": [
     "tailwindcss",
@@ -18,7 +19,7 @@
     "rtl"
   ],
   "bugs": {
-    "url": "https://github.com/atej/tailwind-layouts/issues"
+    "url": "https://github.com/MUppenkamp/tailwind-layouts/issues"
   },
   "files": [
     "dist"
