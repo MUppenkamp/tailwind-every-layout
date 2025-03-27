@@ -10,13 +10,13 @@ import { DEFAULT_THEME_URL, DEFAULT_OPTIONS_URL } from '../constants'
 Install the plugin from npm:
 
 ```
-npm install -D tailwind-layouts
+npm install -D tailwind-every-layout
 ```
 
 Then add the plugin to your `tailwind.config.js` file:
 
 ```js
-const { tailwindLayouts } = require('tailwind-layouts')
+const { tailwindLayouts } = require('tailwind-every-layout')
 
 module.exports = {
   theme: {
@@ -72,7 +72,7 @@ The plugin is extensively configurable.
 You can configure the plugin via the `layouts` section of your `tailwind.config.js` file:
 
 ```js
-const { tailwindLayouts } = require('tailwind-layouts')
+const { tailwindLayouts } = require('tailwind-every-layout')
 
 module.exports = {
   theme: {
@@ -97,7 +97,7 @@ Some options which are not so theme related are configured by passing an object 
 const {
   tailwindLayouts,
   defaultOptions,
-} = require('tailwind-layouts')
+} = require('tailwind-every-layout')
 
 module.exports = {
   theme: {

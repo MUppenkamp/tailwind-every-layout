@@ -1,21 +1,21 @@
 {
-  "name": "tailwind-layouts-packages",
+  "name": "tailwind-every-layout-packages",
   "private": true,
   "workspaces": [
-    "tailwind-layouts",
+    "tailwind-every-layout",
     "docs"
   ],
   "scripts": {
-    "clean": "rimraf ./tailwind-layouts/dist && rimraf ./docs/dist",
+    "clean": "rimraf tailwind-every-layout/dist && rimraf ./docs/dist",
     "dev:docs": "npm run dev --workspace=docs",
-    "dev:plugin": "npm run dev --workspace=tailwind-layouts",
+    "dev:plugin": "npm run dev --workspace=tailwind-every-layout",
     "dev": "concurrently \"npm:dev:*\"",
     "check": "npm run check --workspaces",
-    "slay": "npm run build --workspace=tailwind-layouts && npm run build --workspace=docs && npm run dev --workspace=docs",
-    "build:plugin": "npm run build --workspace=tailwind-layouts",
+    "slay": "npm run build --workspace=tailwind-every-layout && npm run build --workspace=docs && npm run dev --workspace=docs",
+    "build:plugin": "npm run build --workspace=tailwind-every-layout",
     "build:docs": "npm run build --workspace=docs",
     "build": "npm run build:plugin && npm run build:docs",
-    "publish:plugin": "npm run publish --workspace=tailwind-layouts"
+    "publish:plugin": "npm run publish --workspace=tailwind-every-layout"
   },
   "devDependencies": {
     "concurrently": "^7.6.0",

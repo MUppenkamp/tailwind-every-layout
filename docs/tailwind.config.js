@@ -1,4 +1,4 @@
-import { tailwindLayouts, defaultOptions } from 'tailwind-layouts';
+import { tailwindLayouts, defaultOptions } from 'tailwind-every-layout';
 
 export const theme = {
   extend: {

@@ -1,6 +1,6 @@
 # Tailwind Layouts Docs
 
-Source for the [docs](https://tailwind-layouts-plugin.netlify.app) for [`tailwind-layouts`](https://www.npmjs.com/package/tailwind-layouts)
+Source for the [docs](https://tailwind-every-layout-plugin.netlify.app/) for [`tailwind-every-layout`](https://www.npmjs.com/package/tailwind-every-layout)
 
 ## Commands
 

@@ -1,13 +1,13 @@
 {
-  "name": "tailwind-layouts-docs",
+  "name": "tailwind-every-layout-docs",
   "type": "module",
   "version": "1.0.0",
   "private": true,
   "initialAuthor": "Aseem Taneja <taneja.aseem@gmail.com> (https://twitter.com/aseemtaneja)",
   "forkedAuthor": "Mona Uppenkamp <m.uppenkamp@gmx.de> (https://www.instagram.com/monauppi)",
-  "description": "The docs site for the Tailwind Layouts plugin.",
+  "description": "The docs site for the Tailwind Every Layout plugin.",
   "bugs": {
-    "url": "https://github.com/MUppenkamp/tailwind-layouts/issues"
+    "url": "https://github.com/MUppenkamp/tailwind-every-layout/issues"
   },
   "scripts": {
     "dev": "astro dev",
@@ -40,7 +40,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^18.19.79",
-    "tailwind-layouts": "file:../tailwind-layouts",
+    "tailwind-every-layout": "file:../tailwind-every-layout",
     "tailwindcss-logical": "^4.0.0"
   }
 }

@@ -1,6 +1,6 @@
 {
-  "name": "tailwind-layouts",
-  "version": "2.0.0",
+  "name": "tailwind-every-layout",
+  "version": "1.0.0",
   "license": "ISC",
   "initialAuthor": "Aseem Taneja <taneja.aseem@gmail.com> (https://twitter.com/aseemtaneja)",
   "forkedAuthor": "Mona Uppenkamp <m.uppenkamp@gmx.de> (https://www.instagram.com/monauppi)",
@@ -19,18 +19,18 @@
     "rtl"
   ],
   "bugs": {
-    "url": "https://github.com/MUppenkamp/tailwind-layouts/issues"
+    "url": "https://github.com/MUppenkamp/tailwind-every-layout/issues"
   },
   "files": [
     "dist"
   ],
   "type": "module",
-  "main": "./dist/tailwind-layouts.umd.cjs",
-  "module": "./dist/tailwind-layouts.js",
+  "main": "./dist/tailwind-every-layout.umd.cjs",
+  "module": "",
   "exports": {
     ".": {
-      "import": "./dist/tailwind-layouts.js",
-      "require": "./dist/tailwind-layouts.umd.cjs"
+      "import": "./dist/tailwind-every-layout.js",
+      "require": "./dist/tailwind-every-layout.umd.cjs"
     },
     "./package.json": "./package.json"
   },
