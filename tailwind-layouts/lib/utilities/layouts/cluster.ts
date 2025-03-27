@@ -34,7 +34,7 @@ const cluster: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'cluster')}_item-min-w`]: (value: string) => ({
+        [`${c(options, 'cluster')}_item-min-${options.useLogicalProperties ? 'is' : 'w'}`]: (value: string) => ({
           [`&.${c(options, 'cluster')} > *`]: {
             minWidth: `${value}`,
           },

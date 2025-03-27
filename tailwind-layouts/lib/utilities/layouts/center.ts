@@ -29,7 +29,7 @@ const center: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'center')}_max-w`]: (value: string) => ({
+        [`${c(options, 'center')}_max-${options.useLogicalProperties ? 'is' : 'w'}`]: (value: string) => ({
           [`&.${c(options, 'center')}`]: {
             [l(options, 'maxWidth')]: `${value}`,
           },

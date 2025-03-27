@@ -70,7 +70,7 @@ const sidebar: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'sidebar')}_side-w`]: (value: string) => ({
+        [`${c(options, 'sidebar')}_side-${options.useLogicalProperties ? 'is' : 'w'}`]: (value: string) => ({
           [`&.${c(options, 'sidebar')}`]: {
             '& > :first-child': {
               flexBasis: `${value}`,
@@ -94,7 +94,7 @@ const sidebar: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'sidebar')}_main-min-w`]: (value: string) => ({
+        [`${c(options, 'sidebar')}_main-min-${options.useLogicalProperties ? 'is' : 'w'}`]: (value: string) => ({
           [`&.${c(options, 'sidebar')}`]: {
             '& > :last-child': {
               [l(options, 'minWidth')]: `${value}`,

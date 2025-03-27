@@ -39,6 +39,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^18.19.79",
-    "tailwind-layouts": "file:../tailwind-layouts"
+    "tailwind-layouts": "file:../tailwind-layouts",
+    "tailwindcss-logical": "^4.0.0"
   }
 }

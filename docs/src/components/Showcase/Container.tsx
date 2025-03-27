@@ -32,10 +32,10 @@ export default function Container({
       clsx(
         'bg-gray-700',
         {
-          'w-full h-full': !(isFrame || isReel || isIcon),
-          'w-1/2': isFrame,
+          'is-full bs-full': !(isFrame || isReel || isIcon),
+          'is-1/2': isFrame,
           'overflow-y-auto transition-all duration-300': !isReel,
-          'max-w-[calc(100vw-3.5rem)]': isReel,
+          'max-is-[calc(100vw-3.5rem)]': isReel,
           'text-white p-4': isIcon,
         },
         propClassNames,

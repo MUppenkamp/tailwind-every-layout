@@ -46,7 +46,7 @@ export default function Showcase({
   )
 
   return (
-    <div className="max-w-measure">
+    <div className="max-is-measure">
       <div
         className={clsx(
           'bg-gray-800 frame-l frame-l_aspect-5/4 sm:frame-l_aspect-16/10 p-1 not-prose',

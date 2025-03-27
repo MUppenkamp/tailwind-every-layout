@@ -38,7 +38,7 @@ const grid: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'grid')}_item-min-w`]: (value: string) => ({
+        [`${c(options, 'grid')}_item-min-${options.useLogicalProperties ? 'is' : 'w'}`]: (value: string) => ({
           [`&.${c(options, 'grid')}`]: {
             [`@supports (width:min(${value},100%))`]: {
               '&': {

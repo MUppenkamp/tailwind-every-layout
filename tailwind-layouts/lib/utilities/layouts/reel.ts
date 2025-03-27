@@ -47,7 +47,7 @@ const reel: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'reel')}_item-w`]: (value: string) => ({
+        [`${c(options, 'reel')}_item-${options.useLogicalProperties ? 'is' : 'w'}`]: (value: string) => ({
           [`&.${c(options, 'reel')} > *`]: {
             flexBasis: `${value}`,
           },

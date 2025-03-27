@@ -13,6 +13,7 @@ export const plugins = [
   require('./tailwind/base.cjs'),
   tailwindLayouts({
     ...defaultOptions,
+    useLogicalProperties: true,
     useGlobalScrollbarStyles: true,
     measureExceptions: [
       defaultOptions.measureExceptions,

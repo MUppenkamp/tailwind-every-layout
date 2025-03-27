@@ -81,7 +81,7 @@ const cover: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'cover')}_min-h`]: (value: string) => ({
+        [`${c(options, 'cover')}_min-${options.useLogicalProperties ? 'bs' : 'h'}`]: (value: string) => ({
           [`&.${c(options, 'cover')}`]: {
             [l(options, 'minHeight')]: `${value}`,
           },
