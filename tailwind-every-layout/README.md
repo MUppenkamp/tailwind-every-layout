@@ -8,7 +8,7 @@ This plugin is compatible with Tailwind v4. If you want to use it with lower ver
 ## Installation
 
 ```
-npm install -D tailwind-every-layouts
+npm install -D tailwind-every-layout
 ```
 
 ## Documentation
