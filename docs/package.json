@@ -3,8 +3,8 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "initialAuthor": "Aseem Taneja <taneja.aseem@gmail.com> (https://twitter.com/aseemtaneja)",
-  "forkedAuthor": "Mona Uppenkamp <m.uppenkamp@gmx.de> (https://www.instagram.com/monauppi)",
+  "author": "Aseem Taneja <taneja.aseem@gmail.com> (https://twitter.com/aseemtaneja)",
+  "contributors": ["Mona Uppenkamp <m.uppenkamp@gmx.de> (https://www.instagram.com/monauppi)"],
   "description": "The docs site for the Tailwind Every Layout plugin.",
   "bugs": {
     "url": "https://github.com/MUppenkamp/tailwind-every-layout/issues"

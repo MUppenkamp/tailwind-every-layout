@@ -2,8 +2,8 @@
   "name": "tailwind-every-layout",
   "version": "1.0.0",
   "license": "ISC",
-  "initialAuthor": "Aseem Taneja <taneja.aseem@gmail.com> (https://twitter.com/aseemtaneja)",
-  "forkedAuthor": "Mona Uppenkamp <m.uppenkamp@gmx.de> (https://www.instagram.com/monauppi)",
+  "author": "Aseem Taneja <taneja.aseem@gmail.com> (https://twitter.com/aseemtaneja)",
+  "contributors": ["Mona Uppenkamp <m.uppenkamp@gmx.de> (https://www.instagram.com/monauppi)"],
   "description": "Layout primitives for Tailwind CSS",
   "keywords": [
     "tailwindcss",
