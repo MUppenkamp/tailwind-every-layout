@@ -9,6 +9,7 @@
   "bugs": {
     "url": "https://github.com/MUppenkamp/tailwind-every-layout/issues"
   },
+  "homepage": "https://tailwind-layouts-plugin.netlify.app/",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
