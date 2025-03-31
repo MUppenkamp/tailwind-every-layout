@@ -2,6 +2,9 @@
 
 Layout primitives for Tailwind CSS based on Every Layout.
 
+## Tailwind Version
+This plugin is compatible with Tailwind v4. If you want to use it with lower versions, use the package [tailwind-layouts](https://www.npmjs.com/package/tailwind-layouts) package.  
+
 ## Installation
 
 ```
