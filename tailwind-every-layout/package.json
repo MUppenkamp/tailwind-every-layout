@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/MUppenkamp/tailwind-every-layout/issues"
   },
-  "homepage": "https://tailwind-layouts-plugin.netlify.app/",
+  "homepage": "https://tailwind-every-layout-plugin.netlify.app/",
   "files": [
     "dist"
   ],
