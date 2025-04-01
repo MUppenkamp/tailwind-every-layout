@@ -1,4 +1,5 @@
-import plugin from 'tailwindcss/plugin'
+// @ts-ignore Tailwind does not provide correct types 😔
+import plugin, { PluginAPI } from 'tailwindcss/plugin'
 import { PLUGIN_NAMESPACE } from './constants'
 import { t } from './helpers'
 import defaultOptions from './options'
@@ -22,16 +23,14 @@ import borderHC from './utilities/border-hc'
 import type { PluginOptions, PluginTheme, Utility } from './types'
 
 const tailwindLayouts = plugin.withOptions<PluginOptions>(
-  // #region -PLUGIN CREATOR-
-  (options = defaultOptions) =>
-    ({ addBase, addUtilities, matchUtilities, theme }) => {
+  (options = defaultOptions) => {
+    return ({ addBase, addUtilities, matchUtilities, theme }: PluginAPI) => {
       if (options.useGlobalMeasure) {
         addBase(...globalMeasure({ options, theme }))
       }
       if (options.useGlobalScrollbarStyles) {
         addBase(...globalScrollbar({ options, theme }))
       }
-
       const registerUtility = (utility: Utility) => {
         if (utility.static) {
           for (const u of utility.static) {
@@ -44,7 +43,6 @@ const tailwindLayouts = plugin.withOptions<PluginOptions>(
           }
         }
       }
-
       registerUtility(stack)
       registerUtility(box)
       registerUtility(center)
@@ -57,31 +55,30 @@ const tailwindLayouts = plugin.withOptions<PluginOptions>(
       registerUtility(reel)
       registerUtility(imposter)
       registerUtility(icon)
-
       registerUtility(scrollbar)
       registerUtility(borderHC)
-    },
-  // #endregion
-
-  // #region -CONFIG-
+    }
+  },
   (options = defaultOptions) => ({
     theme: {
       [PLUGIN_NAMESPACE]: defaultTheme,
       extend: {
-        spacing: ({ theme }) => ({
+        spacing: ({ theme }: PluginAPI) => ({
           [options.baseSpacingKey]: `${t(theme, 'baseSpacing')}`,
           [options.measureKey]: `${t(theme, 'measure')}`,
         }),
-        maxWidth: ({ theme }) => ({
+        maxWidth: ({ theme }: PluginAPI) => ({
           [options.measureKey]: `${t(theme, 'measure')}`,
         }),
-        minWidth: ({ theme }) => ({
+        minWidth: ({ theme }: PluginAPI) => ({
           [options.measureKey]: `${t(theme, 'measure')}`,
         }),
+        colors: {
+          slay: '#ff69b4',
+        },
       },
     },
-  }),
-  // #endregion
+  })
 )
 
 export { tailwindLayouts, defaultOptions, defaultTheme }

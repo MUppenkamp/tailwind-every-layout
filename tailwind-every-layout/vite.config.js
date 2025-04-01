@@ -8,7 +8,7 @@ export default defineConfig({
       entry: resolve(__dirname, 'lib/main.ts'),
       name: 'TailwindLayouts',
       // the proper extensions will be added
-      fileName: 'tailwind-layouts',
+      fileName: 'tailwind-every-layout',
     },
   },
 })

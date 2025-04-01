@@ -31,7 +31,7 @@ const stack: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'stack')}_space`]: (value) => ({
+        [`${c(options, 'stack')}`]: (value: string) => ({
           [`&.${c(options, 'stack')} > * + *`]: {
             [l(options, 'marginTop')]: `${value}`,
           },
@@ -43,7 +43,7 @@ const stack: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'stack')}_split-after`]: (value) => ({
+        [`${c(options, 'stack')}_split-after`]: (value: string) => ({
           [`&.${c(options, 'stack')}>:nth-child(${value})`]: {
             [l(options, 'marginBottom')]: 'auto',
           },

@@ -32,10 +32,10 @@ export default function Container({
       clsx(
         'bg-gray-700',
         {
-          'w-full h-full': !(isFrame || isReel || isIcon),
-          'w-1/2': isFrame,
+          'is-full bs-full': !(isFrame || isReel || isIcon),
+          'is-1/2': isFrame,
           'overflow-y-auto transition-all duration-300': !isReel,
-          'max-w-[calc(100vw-3.5rem)]': isReel,
+          'max-is-[calc(100vw-3.5rem)]': isReel,
           'text-white p-4': isIcon,
         },
         propClassNames,
@@ -61,7 +61,7 @@ export default function Container({
               })
             }}
             className={clsx(
-              'fixed p-2 bg-gray-50 text-gray-900 font-semibold z-[90]',
+              'fixed p-2 bg-gray-50 text-gray-900 font-semibold z-90',
               propClassNames['imposter-l_m-12']
                 ? 'top-12 left-12'
                 : 'top-base left-base',

@@ -8,7 +8,7 @@ export default function HighContrastToggle({
 }: ActionToggleProps) {
   return (
     <ActionToggle
-      actionClassName="!bg-black !text-white !outline-white"
+      actionClassName="bg-black! text-white! outline-white!"
       Icon={Contrast}
       label="High Contrast"
       {...{ actionClassNames, setActionClassNames }}

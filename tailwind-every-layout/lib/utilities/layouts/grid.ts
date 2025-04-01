@@ -26,7 +26,7 @@ const grid: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'grid')}_space`]: (value) => ({
+        [`${c(options, 'grid')}`]: (value: string) => ({
           [`&.${c(options, 'grid')}`]: {
             gap: `${value}`,
           },
@@ -38,7 +38,7 @@ const grid: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'grid')}_item-min-w`]: (value) => ({
+        [`${c(options, 'grid')}_item-min-${options.useLogicalProperties ? 'is' : 'w'}`]: (value: string) => ({
           [`&.${c(options, 'grid')}`]: {
             [`@supports (width:min(${value},100%))`]: {
               '&': {

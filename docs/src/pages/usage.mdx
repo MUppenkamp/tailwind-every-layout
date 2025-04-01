@@ -10,13 +10,13 @@ import { DEFAULT_THEME_URL, DEFAULT_OPTIONS_URL } from '../constants'
 Install the plugin from npm:
 
 ```
-npm install -D tailwind-layouts
+npm install -D tailwind-every-layout
 ```
 
 Then add the plugin to your `tailwind.config.js` file:
 
 ```js
-const { tailwindLayouts } = require('tailwind-layouts')
+const { tailwindLayouts } = require('tailwind-every-layout')
 
 module.exports = {
   theme: {
@@ -51,13 +51,13 @@ Some layouts require one of the child elements to be specified by a class as wel
 
 Each layout class comes with sensible defaults. However, you can customize the layout by using prop classes.
 
-> For example, when you apply the `stack-l` class, you get the default amount of spacing between the stacked child elements. You can customize this spacing by using the `stack-l_space-*` prop classes. The class `stack-l_space-6` will corresopond to `spacing.6` in your theme (`1.5rem` in the Tailwind's default theme).
+> For example, when you apply the `stack-l` class, you get the default amount of spacing between the stacked child elements. You can customize this spacing by using the `stack-l-*` prop classes. The class `stack-l-6` will corresopond to `spacing.6` in your theme (`1.5rem` in the Tailwind's default theme).
 
 Here are some things to note when using prop classes:
 
 - Prop classes are **optional** and are only required to override the layout's defaults.
 - Prop classes require you to first apply the base layout class on the container element for them to work. This is because, to achieve their overriding behaviour, prop classes use CSS specificity by latching onto the base class.
-  > For instance, `stack-l_space-6` will not work unless you also apply the `stack-l` class.
+  > For instance, `stack-l-6` will not work unless you also apply the `stack-l` class.
 - Prop classes follow the naming pattern <code class="no-wrap">layout_prop-value</code> where `layout` is the base layout class e.g. `stack-l`, `prop` is the name of the prop e.g. `space` and `value` is the value of the prop e.g. `6`.
 - All prop classes map to appropriate values in your theme.
   > With the [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension, you can conveniently see all the available prop classes for each layout class and also get autocompletion for their values.
@@ -72,7 +72,7 @@ The plugin is extensively configurable.
 You can configure the plugin via the `layouts` section of your `tailwind.config.js` file:
 
 ```js
-const { tailwindLayouts } = require('tailwind-layouts')
+const { tailwindLayouts } = require('tailwind-every-layout')
 
 module.exports = {
   theme: {
@@ -97,7 +97,7 @@ Some options which are not so theme related are configured by passing an object 
 const {
   tailwindLayouts,
   defaultOptions,
-} = require('tailwind-layouts')
+} = require('tailwind-every-layout')
 
 module.exports = {
   theme: {
@@ -186,10 +186,10 @@ module.exports = {
 
 The [Tailwind Typography](https://tailwindcss.com/docs/typography-plugin) plugin also sets a measure (maximum width) for the prose container. The value is `65ch` which is also the default value used by this plugin. If you have overridden the default value with a custom value, you sould probably use the same for prose content as well.
 
-You can do this by applying `max-w-measure` along with the `prose` class to the prose container.
+You can do this by applying `max-is-measure` along with the `prose` class to the prose container.
 
 ```html
-<div class="prose max-w-measure">
+<div class="prose max-is-measure">
   <!-- prose content -->
 </div>
 ```
@@ -214,7 +214,7 @@ By doing this we effectively set `max-width: none` to all children of a prose co
 
 #### Overriding measure for an element
 
-If for some reason you want to override the measure for a specific element, you can always use the `max-w-none` class.
+If for some reason you want to override the measure for a specific element, you can always use the `max-is-none` class.
 
 ### Using scrollbar styles
 
@@ -327,6 +327,12 @@ module.exports = {
   ],
 }
 ```
+Also, if you want to use min/max width/height classes, instead of "w" and "h" you have to use "is" and "bs".
+For Example:
+```js
+<p class="center-l_max-w-xs">Physical Properties</p>
+<p class="center-l_max-is-xs">Logical Properties</p>
+```
 
 ### Using custom class names
 
@@ -346,4 +352,4 @@ module.exports = {
 }
 ```
 
-Note that once you change the base layout class name, its prop class names will also change accordingly: `stack-l_space-6` will now be `my-stack_space-6`.
+Note that once you change the base layout class name, its prop class names will also change accordingly: `stack-l-6` will now be `my-stack-6`.

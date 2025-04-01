@@ -31,7 +31,7 @@ const icon: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'icon')}_nudge`]: (value) => ({
+        [`${c(options, 'icon')}_nudge`]: (value: string) => ({
           [`&.${c(options, 'icon')}:not(.${c(
             options,
             'icon',
@@ -67,7 +67,7 @@ const icon: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'icon')}_size`]: (value) => ({
+        [`${c(options, 'icon')}_size`]: (value: string) => ({
           [`&.${c(options, 'icon')}`]: {
             [`& > svg, & > .${c(options, 'icon')}_${c(
               options,
@@ -85,7 +85,7 @@ const icon: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'icon')}_space`]: (value) => ({
+        [`${c(options, 'icon')}`]: (value: string) => ({
           [`&.${c(options, 'icon')}`]: {
             gap: `${value}`,
           },

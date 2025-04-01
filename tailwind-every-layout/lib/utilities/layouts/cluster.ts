@@ -22,7 +22,7 @@ const cluster: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'cluster')}_space`]: (value) => ({
+        [`${c(options, 'cluster')}`]: (value: string) => ({
           [`&.${c(options, 'cluster')}`]: {
             gap: `${value}`,
           },
@@ -34,7 +34,7 @@ const cluster: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'cluster')}_item-min-w`]: (value) => ({
+        [`${c(options, 'cluster')}_item-min-${options.useLogicalProperties ? 'is' : 'w'}`]: (value: string) => ({
           [`&.${c(options, 'cluster')} > *`]: {
             minWidth: `${value}`,
           },

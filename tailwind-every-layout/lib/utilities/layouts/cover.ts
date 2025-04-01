@@ -45,7 +45,7 @@ const cover: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'cover')}_space`]: (value) => ({
+        [`${c(options, 'cover')}`]: (value: string) => ({
           [`&.${c(options, 'cover')}`]: {
             padding: `${value}`,
 
@@ -81,7 +81,7 @@ const cover: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'cover')}_min-h`]: (value) => ({
+        [`${c(options, 'cover')}_min-${options.useLogicalProperties ? 'bs' : 'h'}`]: (value: string) => ({
           [`&.${c(options, 'cover')}`]: {
             [l(options, 'minHeight')]: `${value}`,
           },

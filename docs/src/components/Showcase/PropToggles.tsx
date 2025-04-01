@@ -23,7 +23,7 @@ export default function PropToggles({
             ? 'classes'
             : 'class'}
         </h4>
-        <div className="cluster-l cluster-l_space-3">
+        <div className="cluster-l cluster-l-3">
           {requiredClassNames?.map((className, i) => (
             <ToggleButton
               key={i}
@@ -43,7 +43,7 @@ export default function PropToggles({
       </div>
       <div>
         <h4>Prop classes</h4>
-        <div className="cluster-l cluster-l_space-3">
+        <div className="cluster-l cluster-l-3">
           {toggleableClassNames.map(([className, isSelected], i) => (
             <ToggleButton
               key={i}

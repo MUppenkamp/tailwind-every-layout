@@ -37,7 +37,7 @@ const imposter: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'imposter')}_m`]: (value) => ({
+        [`${c(options, 'imposter')}_m`]: (value: string) => ({
           [`&.${c(options, 'imposter')}`]: {
             [l(options, 'maxWidth')]: `calc(100% - ${value} * 2)`,
             [l(options, 'maxHeight')]: `calc(100% - ${value} * 2)`,

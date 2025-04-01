@@ -1,6 +1,6 @@
-import type { PluginAPI, PluginUtils } from 'tailwindcss/types/config'
+// @ts-ignore
+import type { PluginAPI, PluginUtils } from 'tailwindcss/plugin'
 
-// #region CONFIG
 export type PluginOptions = {
   useLogicalProperties: boolean
   useGlobalMeasure: boolean
@@ -50,27 +50,18 @@ export type PluginTheme = {
   scrollbarSize: 'thin' | 'medium' | 'thick'
   scrollbarBorderRadius: '9999px' | '0px'
 }
-// #endregion
 
-// #region THEME FUNCTIONS
 export type PluginThemeFunction = PluginAPI['theme']
 export type LookupThemeFunction = PluginUtils['theme']
-// #endregion
 
-// #region GENERATORS
 export type AddBaseParams = Parameters<PluginAPI['addBase']>
-// type AddComponentsParams = Parameters<PluginAPI['addComponents']>
-// type MatchComponentsParams = Parameters<PluginAPI['matchComponents']>
 export type AddUtilitiesParams = Parameters<PluginAPI['addUtilities']>
 export type MatchUtilitiesParams = Parameters<
   PluginAPI['matchUtilities']
 >
 
 type ParamsGenerator<
-  T extends
-    | AddBaseParams
-    // | AddComponentsParams
-    // | MatchComponentsParams
+  T extends | AddBaseParams
     | AddUtilitiesParams
     | MatchUtilitiesParams,
 > = (config: {
@@ -79,12 +70,6 @@ type ParamsGenerator<
 }) => T
 
 export type AddBaseParamsGenerator = ParamsGenerator<AddBaseParams>
-
-// export type AddComponentsParamsGenerator =
-//   ParamsGenerator<AddComponentsParams>
-
-// export type MatchComponentsParamsGenerator =
-//   ParamsGenerator<MatchComponentsParams>
 
 export type AddUtilitiesParamsGenerator =
   ParamsGenerator<AddUtilitiesParams>
@@ -96,8 +81,5 @@ export type Utility = {
   static?: AddUtilitiesParamsGenerator[]
   dynamic?: MatchUtilitiesParamsGenerator[]
 }
-// #endregion
 
-// #region UTILITIES
 export type ValueOf<T> = T[keyof T]
-// #endregion

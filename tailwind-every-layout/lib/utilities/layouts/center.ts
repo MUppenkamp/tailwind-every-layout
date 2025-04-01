@@ -29,7 +29,7 @@ const center: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'center')}_max-w`]: (value) => ({
+        [`${c(options, 'center')}_max-${options.useLogicalProperties ? 'is' : 'w'}`]: (value: string) => ({
           [`&.${c(options, 'center')}`]: {
             [l(options, 'maxWidth')]: `${value}`,
           },
@@ -41,7 +41,7 @@ const center: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'center')}_gutters`]: (value) => ({
+        [`${c(options, 'center')}_gutters`]: (value: string) => ({
           [`&.${c(options, 'center')}`]: {
             [l(options, 'paddingLeft')]: `${value}`,
             [l(options, 'paddingRight')]: `${value}`,

@@ -33,7 +33,7 @@ const reel: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'reel')}_space`]: (value) => ({
+        [`${c(options, 'reel')}`]: (value: string) => ({
           [`&.${c(options, 'reel')}`]: {
             '& > * + *': {
               [l(options, 'marginLeft')]: `${value}`,
@@ -47,7 +47,7 @@ const reel: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'reel')}_item-w`]: (value) => ({
+        [`${c(options, 'reel')}_item-${options.useLogicalProperties ? 'is' : 'w'}`]: (value: string) => ({
           [`&.${c(options, 'reel')} > *`]: {
             flexBasis: `${value}`,
           },
@@ -63,7 +63,7 @@ const reel: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'reel')}_h`]: (value) => ({
+        [`${c(options, 'reel')}_h`]: (value: string) => ({
           [`&.${c(options, 'reel')}`]: {
             [l(options, 'height')]: `${value}`,
           },

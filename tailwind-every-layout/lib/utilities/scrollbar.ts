@@ -26,7 +26,7 @@ const scrollbar: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [c(options, 'scrollbar')]: (value) => {
+        [c(options, 'scrollbar')]: (value: string) => {
           const [thumbColor, trackColor, size, borderRadius] =
             `${value}`.split(',')
 
@@ -48,8 +48,8 @@ const scrollbar: Utility = {
               backgroundColor: thC,
               borderWidth:
                 sz === 'thin' || sz === 'medium' || sz === 'thick'
-                  ? borderWidth[sz]
-                  : sz,
+                ? borderWidth[sz]
+                : sz,
               borderRadius: bR,
             },
           }

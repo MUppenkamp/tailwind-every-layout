@@ -5,7 +5,7 @@ const borderHC: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'border-hc')}`]: (value) => ({
+        [`${c(options, 'border-hc')}`]: (value: string) => ({
           outlineStyle: 'solid',
           outlineColor: 'transparent',
           outlineWidth: `${value}`,

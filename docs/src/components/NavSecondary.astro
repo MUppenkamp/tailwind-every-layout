@@ -9,9 +9,9 @@ interface Props {
 const { links } = Astro.props
 ---
 
-<div class="stack-l stack-l_space-2 mt-1">
+<div class="stack-l stack-l-2 mt-1">
   <p class="text-sm font-medium text-gray-400/75">On this page</p>
-  <nav class="stack-l stack-l_space-2 text-sm">
+  <nav class="stack-l stack-l-2 text-sm">
     <ul>
       {
         links.map(({ slug, text, depth }, i) => {

@@ -14,7 +14,7 @@ const box: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'box')}_p`]: (value) => {
+        [`${c(options, 'box')}_p`]: (value: string) => {
           return {
             [`&.${c(options, 'box')}`]: {
               padding: `${value}`,
@@ -28,21 +28,21 @@ const box: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'box')}_text`]: (value) => {
+        [`${c(options, 'box')}_text`]: (value: string) => {
           return {
             [`&.${c(options, 'box')}`]: {
               color: `${value}`,
             },
           }
         },
-        [`${c(options, 'box')}_bg`]: (value) => {
+        [`${c(options, 'box')}_bg`]: (value: string) => {
           return {
             [`&.${c(options, 'box')}`]: {
               backgroundColor: `${value}`,
             },
           }
         },
-        [`${c(options, 'box')}_border`]: (value) => {
+        [`${c(options, 'box')}_border`]: (value: string) => {
           return {
             [`&.${c(options, 'box')}`]: {
               borderColor: `${value}`,

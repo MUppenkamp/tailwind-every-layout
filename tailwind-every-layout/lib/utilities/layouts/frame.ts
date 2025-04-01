@@ -38,7 +38,7 @@ const frame: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'frame')}_aspect`]: (value) => ({
+        [`${c(options, 'frame')}_aspect`]: (value: string) => ({
           [`&.${c(options, 'frame')}`]: {
             aspectRatio: `${value}`,
           },

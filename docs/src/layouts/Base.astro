@@ -7,13 +7,13 @@ import BackToTop from '../components/BackToTop.astro'
 import Heart from '../components/icons/Heart'
 import GitHub from '../components/icons/GitHub'
 import {
-  AUTHOR_TWITTER,
   GITHUB_URL,
   PRIMARY_LINKS,
   SITE_DESCRIPTION,
   SITE_TITLE,
 } from '../constants'
 import type { PathName, TOCLinks } from '../types'
+import "../styles/tailwind.css";
 
 interface Frontmatter {
   title: string
@@ -34,7 +34,7 @@ const pathname = Astro.url.pathname
   .toLowerCase() as PathName
 
 const proseClassNames = clsx(
-  'prose prose-gray prose-pre:scrollbar-[theme(colors.gray.700),,thin] dark:prose-invert',
+  'prose prose-gray prose-pre:scrollbar-[var(--color-gray-700),,thin] dark:prose-invert',
   {
     'prose-h2:mb-1 prose-h3:mb-1 prose-h4:font-medium prose-h4:text-sm [&>section:first-of-type_h2]:mt-0':
       pathname === 'layouts',
@@ -62,18 +62,17 @@ const proseClassNames = clsx(
     />
     <meta property="og:image" content="/og-image.png" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content={`@${AUTHOR_TWITTER}`} />
   </head>
   <body
     class={clsx(
-      'bg-gray-900 min-h-screen stack-l stack-l_space-12 focus:[&_*]:ring-2 focus:[&_*]:ring-gray-600 [&_*]:ring-offset-4 [&_*]:ring-offset-gray-900 [&_blockquote_*]:ring-offset-gray-800',
+      'bg-gray-900 min-bs-screen stack-l stack-l-12 **:focus:ring-2 **:focus:ring-gray-600 **:ring-offset-4 **:ring-offset-gray-900 [&_blockquote_*]:ring-offset-gray-800',
       {
         'stack-l_split-after-2': !headings,
         'stack-l_no-flex': !!headings,
       },
     )}
   >
-    <header class="stack-l stack-l_space-6 pt-8">
+    <header class="stack-l stack-l-6 pt-8">
       <Brand />
       <div class="absolute -top-3 right-2">
         <a
@@ -92,14 +91,14 @@ const proseClassNames = clsx(
     </header>
     {
       headings ? (
-        // Play around with rem value in `center-l_max-w` and `sidebar-l_side-w` value to adjust position
-        <div class="center-l center-l_max-w-[calc(23.5rem+65ch)] center-l_gutters-4">
-          <div class="sidebar-l sidebar-l_side-w-56 sidebar-l_space-8 sidebar-l_no-stretch">
+        // Play around with rem value in `center-l_max-is` and `sidebar-l_side-is` value to adjust position
+        <div class="center-l center-l_max-is-[calc(23.5rem+65ch)] center-l_gutters-4">
+          <div class="sidebar-l sidebar-l_side-is-56 sidebar-l-8 sidebar-l_no-stretch">
             <aside id="sidenav" class="overflow-x-auto">
               <div class="pr-2">
                 <NavSecondary links={headings} />
               </div>
-              <div class="pr-2 hidden max-h-[calc(100vh-8.5rem)] overflow-y-auto scrollbar-[theme(colors.gray.700),,thin] bg-gray-900 z-[60]">
+              <div class="pr-2 hidden max-bs-[calc(100vh-8.5rem)] overflow-y-auto scrollbar-[var(--color-gray-700),,thin] bg-gray-900 z-60">
                 <NavSecondary links={headings} />
               </div>
             </aside>
@@ -113,7 +112,7 @@ const proseClassNames = clsx(
       ) : (
         <main
           class={clsx(
-            'center-l center-l_max-w-none center-l_gutters-4',
+            'center-l center-l_max-is-none center-l_gutters-4',
           )}
         >
           <div class={proseClassNames}>
@@ -128,13 +127,6 @@ const proseClassNames = clsx(
           <span>Crafted with</span>
           <span class="icon-l_icon text-rose-700">
             <Heart />
-          </span>
-          <span>
-            by <a
-              href={`https://twitter.com/${AUTHOR_TWITTER}`}
-              class="[font-variation-settings:'wght'_400] hover:[font-variation-settings:'wght'_600] hover:text-gray-200 focus:[font-variation-settings:'wght'_600] focus:text-gray-200 underline underline-offset-2 transition-all duration-300"
-              >Aseem Taneja</a
-            >
           </span>
         </span>
       </p>
@@ -162,7 +154,7 @@ const proseClassNames = clsx(
         ]
         const navClasses = [
           ['opacity-0', 'invisible'],
-          ['fixed', 'top-8', '!block'],
+          ['fixed', 'top-8', 'block!'],
         ]
         const links = navs[1] && [...navs[1].querySelectorAll('a')]
         const headingThresholds = links
@@ -176,13 +168,13 @@ const proseClassNames = clsx(
                 15,
           )
         const linkClasses = [
-          '!text-primary-500',
-          '!opacity-100',
-          'hover:!text-primary-500',
-          '!border-primary-600',
+          'text-primary-500!',
+          'opacity-100!',
+          'hover:text-primary-500!',
+          'border-primary-600!',
         ]
 
-        // check if sidebar is stacked on top
+        // check if the sidebar is stacked on top
         const checkStacked = () =>
           side.getBoundingClientRect().width >=
           main.getBoundingClientRect().width
@@ -217,14 +209,13 @@ const proseClassNames = clsx(
               nav?.classList.remove(...navClasses[i])
             })
           }
-          // highlight current section
+          // highlight the current section
           headingThresholds?.forEach((top, i, tops) => {
             if (
               i < tops.length - 1 &&
               top &&
               tops[i + 1] &&
               scrollY >= top &&
-              // @ts-ignore
               scrollY < tops[i + 1]
             ) {
               links?.forEach((link, j) => {

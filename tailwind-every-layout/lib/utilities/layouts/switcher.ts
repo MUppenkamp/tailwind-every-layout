@@ -47,7 +47,7 @@ const switcher: Utility = {
   dynamic: [
     ({ options, theme }) => [
       {
-        [`${c(options, 'switcher')}_space`]: (value) => ({
+        [`${c(options, 'switcher')}`]: (value: string) => ({
           [`&.${c(options, 'switcher')}`]: {
             gap: `${value}`,
           },
@@ -59,7 +59,7 @@ const switcher: Utility = {
     ],
     ({ options, theme }) => [
       {
-        [`${c(options, 'switcher')}_threshold`]: (value) => ({
+        [`${c(options, 'switcher')}_threshold`]: (value: string) => ({
           [`&.${c(options, 'switcher')} > *`]: {
             flexBasis: `calc((${value} - 100%) * 999)`,
           },
@@ -76,7 +76,7 @@ const switcher: Utility = {
     ({ options, theme }) => {
       return [
         {
-          [`${c(options, 'switcher')}_limit`]: (value) => {
+          [`${c(options, 'switcher')}_limit`]: (value: string) => {
             const limit =
               getLimit(`${value}`) ||
               getLimit(options.switcherLimit) ||

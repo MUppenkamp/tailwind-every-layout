@@ -1,8 +1,9 @@
 {
-  "name": "tailwind-layouts",
-  "version": "0.3.0",
+  "name": "tailwind-every-layout",
+  "version": "1.0.2",
   "license": "ISC",
   "author": "Aseem Taneja <taneja.aseem@gmail.com> (https://twitter.com/aseemtaneja)",
+  "contributors": ["Mona Uppenkamp <m.uppenkamp@gmx.de> (https://www.instagram.com/monauppi)"],
   "description": "Layout primitives for Tailwind CSS",
   "keywords": [
     "tailwindcss",
@@ -18,19 +19,21 @@
     "rtl"
   ],
   "bugs": {
-    "url": "https://github.com/atej/tailwind-layouts/issues"
+    "url": "https://github.com/MUppenkamp/tailwind-every-layout/issues"
   },
+  "homepage": "https://tailwind-every-layout-plugin.netlify.app/",
   "files": [
     "dist"
   ],
   "type": "module",
-  "main": "./dist/tailwind-layouts.umd.cjs",
-  "module": "./dist/tailwind-layouts.js",
+  "main": "./dist/tailwind-every-layout.umd.cjs",
+  "module": "",
   "exports": {
     ".": {
-      "import": "./dist/tailwind-layouts.js",
-      "require": "./dist/tailwind-layouts.umd.cjs"
-    }
+      "import": "./dist/tailwind-every-layout.js",
+      "require": "./dist/tailwind-every-layout.umd.cjs"
+    },
+    "./package.json": "./package.json"
   },
   "scripts": {
     "dev": "vite build --watch",
@@ -39,8 +42,7 @@
     "publish": "npm run build && npm publish"
   },
   "devDependencies": {
-    "tailwindcss": "^3.2.7",
     "typescript": "^4.9.5",
-    "vite": "^4.1.4"
+    "vite": "^6.2.0"
   }
 }
