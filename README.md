@@ -1,16 +1,19 @@
 # Tailwind Every Layout
 
-Install the plugin:
+Layout primitives for Tailwind CSS based on Every Layout.
+
+## Tailwind Version
+This plugin is compatible with Tailwind v4. If you want to use it with lower versions, use the package [tailwind-layouts](https://www.npmjs.com/package/tailwind-layouts) package.
+
+## Installation
 
 ```
 npm install -D tailwind-every-layout@latest
 ```
 
-Read the [docs](https://tailwind-every-layout-plugin.netlify.app) for more information.
+## Documentation
 
----
+📝 Read the [docs](https://tailwind-every-layout-plugin.netlify.app) for more information.
 
-This is a monorepo containing the following packages:
-
-- [Tailwind Every Layout plugin](/tailwind-every-layout)
-- [Docs site](/docs)
+## Questions
+Any questions? See my [GitHub](https://github.com/MUppenkamp/tailwind-every-layout)
